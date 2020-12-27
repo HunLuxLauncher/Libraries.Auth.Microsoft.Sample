@@ -7,7 +7,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Windows;
 
-namespace Libraries.Auth.Tests
+namespace Libraries.Auth.Sample
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
