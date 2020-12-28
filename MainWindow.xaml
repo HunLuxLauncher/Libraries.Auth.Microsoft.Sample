@@ -1,13 +1,34 @@
-﻿<Window x:Class="Libraries.Auth.Sample.MainWindow"
+﻿<Window x:Class="Libraries.Auth.Microsoft.Sample.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Libraries.Auth.Sample" xmlns:cc="clr-namespace:hu.czompisoftware.customcontrols.CuttingCorners;assembly=CustomControls"
+        xmlns:local="clr-namespace:Libraries.Auth.Microsoft.Sample"
+        xmlns:cc="clr-namespace:hu.czompisoftware.customcontrols.CuttingCorners;assembly=CustomControls"
         mc:Ignorable="d"
-        Title="HunLux Launcher Authentication Test Environment - 20w52a" Height="650" Width="900">
+        Title="" Height="450" Width="800">
     <Grid>
-        <WebBrowser x:Name="viewer"/>
-        <TextBlock x:Name="preview" Text="Authentication in progress..." TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32"/>
+        <Grid.Background>
+            <SolidColorBrush Color="#FF1B1B1C"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <cc:Button x:Name="CallGraphButton" Style="{StaticResource ButtonDark}" Content="Login with Microsoft Account" Padding="16,8" Click="CallGraphButton_Click" Margin="8,8,0,0" MergeSide="Right"/>
+            <cc:Button x:Name="SignOutButton" Style="{StaticResource ButtonDanger}" Content="Sign-Out" Padding="16,8" Click="SignOutButton_Click" Margin="0,8,8,0" IsEnabled="False" MergeSide="Left"/>
+        </StackPanel>
+        <Label Grid.Row="1" Content="Status" Foreground="#EAEAEA" Margin="3,0,0,0" FontFamily="Segoe Ui" />
+        <cc:ScrollViewer Grid.Row="2" Background="#FF343A40" Margin="8,0,8,8">
+            <TextBlock x:Name="ResultText" Background="Transparent" Foreground="#EAEAEA" TextWrapping="Wrap" FontFamily="Segoe Ui"/>
+        </cc:ScrollViewer>
+        <Label Grid.Row="3" Content="Details"  Foreground="#EAEAEA" Margin="3,0,0,0" FontFamily="Segoe Ui" />
+        <cc:ScrollViewer Grid.Row="4" Background="#FF343A40" Margin="8,0,8,8">
+            <TextBox x:Name="TokenInfoText"  Background="#343A40" BorderThickness="0" Foreground="#EAEAEA" TextWrapping="Wrap" FontFamily="Segoe Ui"/>
+        </cc:ScrollViewer>
     </Grid>
 </Window>
