@@ -1,4 +1,4 @@
-# Libraries.Auth.Sample
+# Libraries.Auth.Microsoft.Sample
 Sample WPF app to test [`Libraries.Auth.Microsoft`](https://github.com/HunLuxLauncher/Libraries.Auth.Microsoft).
 
 > **IMPORTANT!**
